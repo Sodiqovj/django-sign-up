@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<form method="POST" style="width: 300px;padding: 20px 20px;border: 2px solid black;margin-left: 470px;margin-top: 50px;">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="sub">Submit</button>
+</form>
+
+<style>
+    form *{
+        margin-top: 40px;
+    }
+    .sub{
+        margin-top: 20px;
+        margin-left: 100px;
+        padding: 10px 15px;
+        background-color: royalblue;
+    }
+</style>
+
+{% endblock content %}
